@@ -12,16 +12,20 @@ options.binary_location="C:\\Program Files\\Google\\Chrome\\Application\\chrome.
 driver_path = "C:\\Users\\UMUT\\Downloads\\chromedriver.exe"
 browser = webdriver.Chrome(executable_path=driver_path,chrome_options=options)
 browser.get("https://twitter.com")
-#time.sleep(5)
+time.sleep(2)
 
 browser.find_element_by_xpath('//*[@id="react-root"]/div/div/div/main/div/div/div/div[1]/div/div[3]/div[5]/a/div').click()
-
+time.sleep(2)
 # fill the number or mail
-#browser.find_element_by_xpath('//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[5]/label/div/div[2]/div/input').send_keys('knay_umut')
-
-
-
+browser.find_element_by_xpath('//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[5]/label/div/div[2]/div/input').send_keys('knay_umut')
+time.sleep(2)
+browser.find_element_by_xpath('//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[6]/div').click()
+time.sleep(2)
 # fill the password
-#browser.find_element_by_xpath('//*[@id ="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[2]/label/div/div[2]/div/input').send_keys('Qwert123.')
+browser.find_element_by_xpath('//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[3]/div/label/div/div[2]/div[1]/input').send_keys('Qwert123.')
+ 
 # clicking on that element 
-#browser.find_element_by_xpath('//*[@id ="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[3]/div/div').click()
+time.sleep(2)
+browser.find_element_by_xpath('//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div').click()
+time.sleep(2)
+browser.get("https://twitter.com/knay_umut")
